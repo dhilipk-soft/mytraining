@@ -1,0 +1,143 @@
+*{
+    margin : 0 ;
+    padding : 0;
+    box-sizing: border-box;
+    /* background-color: rgb(185, 138, 230) */
+}
+
+.outbody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blueviolet;
+    padding: 50px;
+}
+
+#body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    background-color: aliceblue;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 80%;
+    min-width: 400px;
+    max-width: 700px;
+}
+
+.user,
+.pass,
+.inputlabel,
+.sel{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user input,
+.pass input,
+.inputlabel input,
+.sel select{
+    width: 100%;
+    max-width: 450px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.user input:focus,
+.pass input:focus,
+.inputlabel input:focus,
+.sel select:focus{
+    outline: none;
+    border-color: rgb(168, 106, 226);
+    box-shadow: 0 0 0 1px rgba(168, 106, 226, 0.5);
+}
+
+.checkbox,
+.radio{
+    display : flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+}
+
+.onoff{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.checkbox,
+.radio .rod {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  /* border: 1px solid #ccc; */
+}
+
+.sel select:hover{
+    cursor: pointer;
+    background-color: rgb(168, 106, 226);
+    color: white
+}
+
+.btn {
+    display : flex;
+    justify-content: space-between;
+}
+
+.btn button{
+    padding :10px 20px;
+    border: 1px solid rgb(168, 106, 226);
+    border-radius: 10px;
+    color: rgb(168, 106, 226);
+}
+
+.btn button:hover{
+    background-color: rgb(168, 106, 226);
+    cursor: pointer;
+    color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #a86ae2;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
