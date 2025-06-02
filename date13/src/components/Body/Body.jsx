@@ -1,13 +1,11 @@
 
-import SideNavBar from '../NavBar/SideNavbar.jsx'
 export default function Body() {
     return (
         <div className="body">
-            <div className="sideBar">
-                <SideNavBar />
-            </div>
-            <div className="suggestion">
-                <h1>Suggestion</h1>
+            <div className="searchbox">
+                <input type="text" />
+                <input type="date" name="" id="" />
+                
             </div>
         </div>
     )

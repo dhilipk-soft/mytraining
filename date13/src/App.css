@@ -2,31 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navBar{
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    height: 10vh;    
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background-color: #575454;
-    padding: 20px;
+    background-color: #000dffd9;
+    padding: 20px 200px;
     color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.App{
-    padding: 12vh 0;
-    display: flex;
-    flex-direction: column;
-}
-
 .body{
     display: flex;
-
 }
 
 .sideBar{
@@ -34,31 +25,76 @@
     padding: 20px;
 }
 
-.side-nav-bar{
+.top{
     display: flex;
-    flex-direction: column;
-    gap: 10px
+    width: 100%;
+    justify-content: space-between;
 }
 
-.side-nav-bar div{
-    padding: 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease
+.websitename{
+    font-size: x-large;
+    font-weight: 300;
 }
 
-.side-nav-bar div:hover{
-    background-color: #ccc;
+.websitename:hover{
     cursor: pointer;
 }
 
-.suggestion{
-    flex: 1;
-    padding: 20px;
-    margin: 0 20px;;
-    background-color: bisque;
+.logcontainer{
+    display: flex;
+    gap: 20px;
+}
+
+.logcontainer button{
+    padding: 5px 15px;
+    color: #000dffd9;
+    font-weight: 600;
+    border-radius: 3px;
+    border: solid 1px #000dffd9 ;
+}
+
+.logcontainer button:hover{
+    cursor: pointer;
+}
+
+.categories{
+    display: flex;
+    gap: 25px;
+}
+
+.categorie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none ;
+}
+
+.categorie:hover{
+    background-color: #5860f9d9;
+    cursor: pointer;
+}
+
+.heroContainer{
+
+    padding: 60px 200px;
+    color: #f0f0f0;
+    height: 15rem;
+    background-color: #000dffd9;
 
 }
 
+.heroContainer h1{
+    font-size: 50px;
+    font-weight:bolder ;
+}
+
+.heroContainer p{
+    font-size: 30px;  
+}
 .footer {
     position: fixed;
     bottom: 0;
