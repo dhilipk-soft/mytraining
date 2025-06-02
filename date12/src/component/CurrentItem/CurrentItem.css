@@ -1,0 +1,41 @@
+.currentItem-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.currentItem-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.currentItem-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.currentItem-info p {
+  margin: 0.3rem 0;
+}
+
+.currentItem-section {
+  margin-top: 1.5rem;
+}
+
+.currentItem-section h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.currentItem-section ul,
+.currentItem-section ol {
+  padding-left: 1.5rem;
+}

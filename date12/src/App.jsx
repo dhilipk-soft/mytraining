@@ -33,7 +33,7 @@ function App() {
   },[search])
 
   return (
-    <div className='app'>
+    <div className='app' style={{margin: "0" , padding: "0"}}>
 
       <Search setSearch={setSearch} />
       <ListBody data={data} currentItem={currentItem} setCurrentItem={setCurrentItem} />

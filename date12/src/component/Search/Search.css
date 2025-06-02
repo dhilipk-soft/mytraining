@@ -11,18 +11,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
 
 }
 
 .searchForm{
 
     /* background-color: #ccc; */
-    margin: 20px 10px;
+    margin: 20px 10px; 
 }
 
 .searchForm input{
 
     outline: none;
+    max-width: 700px;
+    width: 500px;
+    min-width: 200px;
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid #ccc;

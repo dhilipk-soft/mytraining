@@ -1,10 +1,10 @@
 import './ListShow.css'
 
-function ListShow({item}) {
+function ListShow({item, setCurrentItem}) {
     return (
-        <div className='listshow'>
+        <div className='listshow' onClick={() => setCurrentItem(item)}>
             <div key={item.id}>
-            <img style={{width: '100px', height: '100px'}} src={item.image} alt={item.title} />
+            <img  src={item.image} alt={item.title} />
             <h3>{item.name}</h3>
           </div>
         </div>
