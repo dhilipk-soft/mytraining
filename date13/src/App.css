@@ -269,12 +269,19 @@
     gap: 10px;
     max-width: 1140px;
     margin-top: 15px;
+    overflow-x: scroll;
 }
 
 .tripComponent{
     display: flex;
     flex-direction: column;
     width: 180px;
+}
+
+.tripComponent :hover,
+.propertyTypes :hover
+{
+    cursor: pointer;
 }
 
 .tripComponentBody{
@@ -294,3 +301,118 @@
     font-size:small;
 }
 
+.propertyController{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 1140px;
+    margin-top: 15px;
+    overflow-x: scroll;
+}
+
+.propertyList{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.propertyTypes{
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+}
+
+.propertyController img{
+    height: 100%;
+    max-height: 250px;
+    width: auto;
+    border-radius: 10px;
+    object-fit: cover
+}
+
+/* 
+@media (max-width: 1140px) {
+    .navBar,
+    .body,
+    .heroContainer,
+    .searchbox,
+    .main-body,
+    .offers,
+    .quickPlanner,
+    .plannerCategory,
+    .propertyController {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logcontainer {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .heroContainer h1 {
+        font-size: 32px;
+    }
+
+    .heroContainer p {
+        font-size: 20px;
+    }
+
+    .offers {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .offers-right img {
+        max-height: none;
+        width: 100%;
+    }
+
+    .tripComponent {
+        width: 150px;
+    }
+
+    .propertyTypes {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchbox {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .inputfield {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid orange;
+    }
+
+    .inputfield:last-child {
+        border-bottom: none;
+    }
+
+    .searchbtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .tripComponent,
+    .propertyTypes {
+        width: 100%;
+    }
+
+    .offers-left button {
+        width: 100%;
+    }
+} */

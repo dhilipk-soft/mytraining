@@ -1,6 +1,8 @@
 import { useState } from "react"
 import OffersController from "../Offers/OfferController"
 import QuickPlanner from "../Planner/QuickPlanner"
+import PropertyController from "../Property/PropertyController"
+import TrendingDestinationController from "../TrendingDestination/TrendingDestinationController"
 export default  function MainBody() {
 
 
@@ -8,6 +10,8 @@ export default  function MainBody() {
         <div className="main-body">
             <OffersController />
             <QuickPlanner />
+            <PropertyController />
+            <TrendingDestinationController />
         </div>
     )
 }
