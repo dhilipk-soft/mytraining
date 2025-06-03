@@ -2,27 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Roboto', sans-serif;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.appcontainer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #003b95;
+    justify-content: center;
+    align-items: center;
 }
 
 .navBar{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%;
-    background-color: #000dffd9;
-    padding: 20px 200px;
+    width: 1100px;
+    min-width: 700px;
+    padding: 40px 10px;
     color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .body{
     display: flex;
-}
-
-.sideBar{
-    width: 19vw;
-    padding: 20px;
+    flex-direction: column;
+    width: 1100px;
+    
+    justify-content: center;
 }
 
 .top{
@@ -46,11 +71,11 @@
 }
 
 .logcontainer button{
-    padding: 5px 15px;
-    color: #000dffd9;
+    padding: 10px 10px;
+    color: #1a53a8;
     font-weight: 600;
     border-radius: 3px;
-    border: solid 1px #000dffd9 ;
+    border: solid 1px #1a53a8 ;
 }
 
 .logcontainer button:hover{
@@ -74,16 +99,17 @@
 }
 
 .categorie:hover{
-    background-color: #5860f9d9;
+    background-color: #1a53a8;
     cursor: pointer;
 }
 
 .heroContainer{
 
-    padding: 60px 200px;
+    width: 1100px;
+    padding: 60px 10px;
     color: #f0f0f0;
-    height: 15rem;
-    background-color: #000dffd9;
+    min-height: 15rem;
+    background-color: #003b95;
 
 }
 
@@ -95,13 +121,114 @@
 .heroContainer p{
     font-size: 30px;  
 }
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+/* 
+.searchbox{
+    margin-top: -30px;
+    display: flex;
     width: 100%;
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px orange;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.searchbox button{
+    height: 100%;
+    border: solid 2px orange;
+    border-radius: 10px;
+    background-color: #003b95;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: large;
+    padding: 10px 20px;
+}
+
+.searchbar:hover{
+    cursor:inherit
+}
+
+.searchbar,
+.datebar,
+.choosemember {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    flex: 1;
+    border: solid 2px orange;
+    width: 345px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    flex-wrap: nowrap;
+    height: 100%;
+    font-weight: 100;
+    background-color:#ffffff ;
+}
+
+.searchbar:focus{
+    outline: none;
+} */
+
+.searchbox {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    background-color: orange;
+    border: 3px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -30px;
+}
+
+.inputfield {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    border-right: 3px solid orange;
+    flex: 1;
+    background-color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.inputfield:last-child {
+    border-right: none;
+}
+
+.searchbar {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.icon {
+    font-size: 18px;
+    color: #666;
+}
+
+.searchbtn {
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+.searchbtn:hover {
+    background-color: #005da8;
+}
+
+.checkForFlight{
+
+    margin: 20px 0;
 }

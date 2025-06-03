@@ -8,10 +8,16 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <HeroContainer />
-      <Body />
-      <Footer />
+      <div className="appcontainer">
+        <NavBar />
+        <HeroContainer />
+      </div>      
+      <div className="body">
+        <Body />
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   )
 }

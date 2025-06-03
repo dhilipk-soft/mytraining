@@ -11,13 +11,13 @@ export default function Categories(){
             <div className="categorie filght-hotel">
                 Flight + Hotel
             </div>
-            <div className="car-rents categorie">
+            <div className="categorie car-rents ">
                 Car rentals
             </div>
-            <div className="attractions categorie">
+            <div className="categorie attractions ">
                 Attractions
             </div>
-            <div className="airport-taxis categorie">
+            <div className="categorie airport-taxis ">
                 Airport Taxis
             </div>
         </div>

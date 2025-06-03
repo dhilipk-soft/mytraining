@@ -4,8 +4,9 @@ import Categories from '../Categorys/Categories.jsx'
 export default function NavBar(){
 
     return ( 
-    <div className="navBar">
-        <Top />
-        <Categories />
-    </div>)
+        <div className="navBar">
+                <Top />
+                <Categories />
+        </div> 
+    )
 }
