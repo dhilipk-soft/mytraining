@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import MainSearchBox from '../MainSearchBox/MainSearchBox';
+import MainBody from './MainBody';
 export default function Body() {
 
 
@@ -10,6 +11,7 @@ export default function Body() {
                 <input type="checkbox" className='checkFlight' id='checkFlight' />
                 <label htmlFor="checkFlight">I'm looking for flights</label>
            </div>
+           <MainBody />
         </div>
     )
 }
