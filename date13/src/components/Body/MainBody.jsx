@@ -3,6 +3,8 @@ import OffersController from "../Offers/OfferController"
 import QuickPlanner from "../Planner/QuickPlanner"
 import PropertyController from "../Property/PropertyController"
 import TrendingDestinationController from "../TrendingDestination/TrendingDestinationController"
+import ExploreController from "../Explore/ExploreController"
+
 export default  function MainBody() {
 
 
@@ -11,7 +13,8 @@ export default  function MainBody() {
             <OffersController />
             <QuickPlanner />
             <PropertyController />
-            <TrendingDestinationController />
+            <ExploreController />
+            {/* <TrendingDestinationController /> */}
         </div>
     )
 }

@@ -23,39 +23,19 @@ export default function TrendingDestinationController() {
             id: 5,
             name: "Tokyo",
             image : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
-        },{
-            id: 6,
-            name: "Sydney",
-            image : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
-        },{
-            id: 7,
-            name: "Rome",
-            image : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
-        },{
-            id: 8,
-            name: "Barcelona",
-            image : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
-        },{
-            id: 9,
-            name: "Amsterdam",
-            image : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
-        },{
-            id: 10,
-            name: "Copenhagen",
-            image : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
         }      
     ])
 
     return (
         <div className="trending">
-            <h3>Trending Destination</h3>
-              <div className="trendingdestination">
-                {
-                    trendingDestination.map((destination) => {
-                        return <TrendingDestination key={destination.id} destination={destination} />
-                    })
-                }
-              </div>
+            <h2>Trending Destination</h2>
+            <div className="trendingdestination">
+            {
+                trendingDestination.map((destination) => {
+                    return <TrendingDestination key={destination.id} destination={destination} />
+                })
+            }
+            </div>
         </div>
     )
 }
