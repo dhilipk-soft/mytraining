@@ -4,6 +4,8 @@ import QuickPlanner from "../Planner/QuickPlanner"
 import PropertyController from "../Property/PropertyController"
 import TrendingDestinationController from "../TrendingDestination/TrendingDestinationController"
 import ExploreController from "../Explore/ExploreController"
+import WeekDeals from "../WeekDeals/WeekDeals"
+import UniquePropertie from "../Properties/UniquePropertie"
 
 export default  function MainBody() {
 
@@ -14,6 +16,8 @@ export default  function MainBody() {
             <QuickPlanner />
             <PropertyController />
             <ExploreController />
+            <WeekDeals />
+            <UniquePropertie />
             {/* <TrendingDestinationController /> */}
         </div>
     )
