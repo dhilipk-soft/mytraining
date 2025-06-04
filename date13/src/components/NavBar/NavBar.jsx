@@ -1,13 +1,13 @@
 import Top from './Top.jsx'
 import Categories from '../Categorys/Categories.jsx'
 
-export default function NavBar({setActiveDashboard}) {
+export default function NavBar() {
 
     return ( 
         <div className="navBar">
             <div className="navBarContainer">
                 <Top />
-                <Categories setActiveDashboard={setActiveDashboard} />
+                <Categories  />
             </div>
                
         </div> 

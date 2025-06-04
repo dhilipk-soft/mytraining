@@ -10,18 +10,19 @@ export default function FlightHeroContainer() {
                 </div>
                 <div className="flightheroContainerBottom">
                     <div className="flightheroBottomCheck">
-                        <ul className="flightheroBottomCheckList">
-                            <li> <input type="checkbox" for="roundtrip" id="roundtrip" /> 
+                        <div className="flightheroBottomCheckList">
+                            <div> <input type="checkbox" for="roundtrip" id="roundtrip" className="checkFlight roundtrip" /> 
                                 <label htmlFor="roundtrip">Round-trip</label>
-                            </li>
-                            <li> <input type="checkbox" for="oneway" id="oneway" />
+                            </div>
+                            <div> <input type="checkbox" for="oneway" id="oneway" className="checkFlight oneway" />
                                 <label htmlFor="oneway">One-way</label>
-                            </li>
-                            <li> <input type="checkbox" for="multicity" id="multicity" />
+                            </div>
+                            <div> <input type="checkbox" for="multicity" id="multicity" className="checkFlight multicity" />
                                 <label htmlFor="multicity">Multi-city</label>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
