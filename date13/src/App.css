@@ -132,7 +132,6 @@
 
 .herobottom{
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 1140px;
 }
@@ -584,10 +583,15 @@
     font-weight: bold;
 }
 
-.flightheroContainerBottom{
+.tripType{
     display: flex;
-    flex-direction: column;
     gap: 10px;;
+}
+
+.flightheroBottomCheck{
+    display: flex;
+    
+    gap: 10px;
 }
 
 .flightheroBottomCheckList{
@@ -601,9 +605,202 @@
     margin-top: 15px;
 }
 
+.flightheroBottomCheckList div{
+    display: flex;
+    margin-left: 10px;
+}
+
+.flightheroBottomCheckList input{
+    width: 20px;
+    height: 20px;;
+}
+
+.flightheroBottomCheckList label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 1rem;
+    cursor: pointer;
+}
+
 .checkFlight{
     margin-right: 10px;
     
+}
+
+.economyContainer{
+    width: 100px;
+}
+
+.economyContainer select{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 1rem;
+    border: none;
+    background-color: transparent;
+
+}
+
+.directflightonlyCheckbox{
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 1rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.flightSearchBoxContainerDefalut{
+    width: 100%;
+    margin: 20px 0;
+    background-color: orange;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+.flightSearchBoxContainerWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 66px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.flightSearchBoxHorizontalDefault{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+}
+
+.flightSearchBoxSwitch{
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.flightSearchBoxSwitch button{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.flightSearchBoxfrom,
+.flightSearchBoxto{
+    width: auto;
+    min-width: 260px;
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.flightSearchBoxDate,
+.flightSearchBoxTraveller{
+    width: auto;
+    min-width: 175px;
+    background-color: white;
+    border-radius: 10px;
+    height: 100%;
+    flex: 1  ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 10px;
+}
+
+.flightSearchBoxSearchButton{
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#003b95;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 50px;
+
+}
+
+.flightSearchBoxSearchButton button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.flightBody{
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.popularFlightType{
+    display: flex;
+    margin-top: 20px ;
+    height: 50px;
+    margin-bottom: -4px;
+}
+
+.popularFlightInternationalText,
+.popularFlightDomesticText{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 20px;
+    width: 150px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.popularFlightInternationalh,
+.popularFlightDomestich{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.popularFlightInternationalh:hover,
+.popularFlightDomesticText:hover{
+    background-color: #ccc;
+    border-radius: 5px;
+    color: #003b95
+}
+
+
+
+.popularFlightInternationalText hr,
+.popularFlightDomesticText hr{
+    position: relative;
+    margin-top: -2px;     
+    height: 3px;
+    width: 100%;
+    border: none;
+    background-color: #003b95;
+}
+
+.popularFlightContainerList{
+    width: 100%;
+    background-color: #000000;
 }
 
 /* 
