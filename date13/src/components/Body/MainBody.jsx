@@ -6,6 +6,7 @@ import TrendingDestinationController from "../TrendingDestination/TrendingDestin
 import ExploreController from "../Explore/ExploreController"
 import WeekDeals from "../WeekDeals/WeekDeals"
 import UniquePropertie from "../Properties/UniquePropertie"
+import SignContainer from "../SignContainer/SignContainer"
 
 export default  function MainBody() {
 
@@ -18,6 +19,7 @@ export default  function MainBody() {
             <ExploreController />
             <WeekDeals />
             <UniquePropertie />
+            <SignContainer />
             {/* <TrendingDestinationController /> */}
         </div>
     )
