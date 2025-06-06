@@ -66,6 +66,7 @@ export default function FilterBox() {
     },
 
     ]);    
+    const [checkedList, setCheckedList] = useState([])
 
     const [facilitiesshow, setFacilitiesshow] = useState(false)
     const [bedcount, setBedcount] = useState(1)
@@ -76,15 +77,42 @@ export default function FilterBox() {
     return (
         <div className="filterBox">
 
+            <div className="checkedList">
+                <div className="checkedListhead">
+                    Filter By
+                </div>
+                <div className="checkedBodyList">
+                {
+                    checkedList.map((checked) => {
+                        return <div className="checkedItem" key={checked.id}>
+                            {checked.name}
+                        </div>
+                    })
+                }
+                </div>
+            </div>
+            <hr />
             <div className="filterFacilities">
                 <div className="filterTitle">Filter
                 </div>
                 <div className="filterFacilitiesCheck">
                     {
                         facilitiesList.map((facility) => {
-                            return <div className="filterFacility" key={facility.id}>
+                            return <div className="filterFacility" key={facility.id} >
                                 <input type="checkbox" id={facility.name} name={facility.name}
-                                    checked={facility.checked} value={facility.name} />
+                                    checked={facility.checked} value={facility.name}
+                                    onChange={() => {
+                                        const newFacilities = facilities.map((f) => {
+                                            if (f.id === facility.id) {
+                                                return { ...f, checked: !f.checked }
+                                            }
+                                            return f
+                                        })
+                                        setFacilities(newFacilities)
+                                        const newCheckedList = newFacilities.filter((f) => f.checked)
+                                        setCheckedList(newCheckedList)
+                                        
+                                    }} />
                                 <label htmlFor={facility.name}>{facility.name}</label>
                             </div>
                         })
@@ -148,7 +176,13 @@ export default function FilterBox() {
                                 <div className="meal" key={index}>
                                     
                                     <div className="mealcheckbox">
-                                        <input type="checkbox" checked={meal.checked} onChange={() => setMealChecked(meal.id)} />
+                                        <input type="checkbox" checked={meal.checked} 
+                                        onChange={() => {setMeals(meals.map((m) => m.id === meal.id ? { ...m, checked: !m.checked } : m))
+
+                                        const newCheckedList = meals.filter((f) => f.checked)
+                                        setCheckedList(newCheckedList)
+                            }
+                                        } />
                                     </div>
                                     <div className="mealstype">
                                         {meal.name}
@@ -160,7 +194,7 @@ export default function FilterBox() {
                 </div>
             </div>       
             <div className="reviews">
-                
+
             </div>
       
         </div>

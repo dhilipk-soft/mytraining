@@ -1061,6 +1061,10 @@ a{
     width: 100%;
 }
 
+.filterBox hr{
+    background-color: #ccc;
+}
+
 .bedandbathcount{
     display: flex;
     width: 100%;
@@ -1068,13 +1072,15 @@ a{
 
 .filterTitle,
 .bedandbathTitle,
-.mealsTitle{
+.mealsTitle,
+.checkedListhead{
     font-weight: bold;
 }
 
 .filterFacilities,
 .bedandbath,
-.meals{
+.meals,
+.checkedList{
     display: flex;
     flex-direction: column;
     width: 100%;
