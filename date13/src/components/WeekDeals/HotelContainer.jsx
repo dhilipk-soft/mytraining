@@ -1,8 +1,9 @@
 
+import { NavLink } from "react-router-dom"
 export default function HotelContainer({room,display}) {
 
     return (
-        <div className="hotelContainer">
+        <NavLink to={`/search`} className="hotelContainer">
             <div className="hotelContainerHead">
                 <img src={room.image} className="hotelContainerImage" alt="" />
             </div>
@@ -30,6 +31,6 @@ export default function HotelContainer({room,display}) {
                     </div>
                  }
             </div>
-        </div>
+        </NavLink>
     )
 }

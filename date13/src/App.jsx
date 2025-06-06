@@ -10,6 +10,7 @@ import FlightHeroContainer from './components/FlightHeroContainer/FlightHeroCona
 import SignPage from './Pages/SignPage.jsx'
 import Top from './components/NavBar/Top.jsx'
 import { Route, Routes } from 'react-router-dom'
+import SearchPage from './Pages/SearchPage.jsx'
 
 function App() {
 
@@ -33,7 +34,6 @@ function App() {
                 <div className="herobottom">
                   <Body  />
                 </div>
-                
               </div>} />
             <Route path='/flights' element={
               <div className='bodycontainer'>
@@ -46,15 +46,16 @@ function App() {
                 </div>
               </div>
               } />
-
             <Route path='/login' element={<SignPage />} />
+            <Route path='/search' element={<SearchPage />} >
+            
+            </Route>
           </Routes>
         </div>
       </div>
       <div className="footer">
         <Footer />
       </div>
-      
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import MainSearchBox from '../MainSearchBox/MainSearchBox';
+import MainSearchBox from '../SearchBox/MainSearchBox';
 import MainBody from './MainBody';
 import HeroContainer from '../Heros/HeroContainer';
 export default function Body() {
