@@ -1,7 +1,7 @@
 import { useState } from "react"
 import TripList from "../TripList/TripList"
 
-export default function ExploreController(){
+export default function ExploreController({hotelData}) {
 
     const [trip, setTrip] = useState([
         {
@@ -55,7 +55,7 @@ export default function ExploreController(){
                 <h2>Explore India</h2>
                 <p>These popular destination have a lot to offer</p>
             </div>
-            <TripList trip={trip} />
+            <TripList hotelData={hotelData} />
             
         </div>
     )

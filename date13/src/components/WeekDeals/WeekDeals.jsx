@@ -1,7 +1,9 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import HotelContainer from "./HotelContainer";
+import { SearchContext } from "../../Context/SearchContext";
 
-export default function WeekDeals(){
+
+export default function WeekDeals({hotelData}) {
 
     const [rooms, setRooms] = useState([
         {
@@ -69,7 +71,7 @@ export default function WeekDeals(){
                 <p>save on stays</p>
             </div>
             <div className="weekdealbody">
-                {rooms.map((room) => (<HotelContainer key={room.id} room={room} display={true} />))}
+                {hotelData.map((room) => (<HotelContainer key={room.id} room={room.rooms[0]} display={true} />))}
             </div>
         </div>
     )

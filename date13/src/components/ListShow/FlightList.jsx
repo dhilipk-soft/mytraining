@@ -6,7 +6,7 @@ export default function FlightList({flights, portType}) {
             <div className="flightlistContainer">
                 {flights
                     .filter(flight => flight.portType.toLowerCase() === portType.toLowerCase())
-                    .map(flight => <Flight flight={flight} />)
+                    .map(flight => <Flight key={flight.id} flight={flight} />)
                 }
             </div>
         </div>

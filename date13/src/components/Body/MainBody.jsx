@@ -8,17 +8,17 @@ import WeekDeals from "../WeekDeals/WeekDeals"
 import UniquePropertie from "../Properties/UniquePropertie"
 import SignContainer from "../SignContainer/SignContainer"
 
-export default  function MainBody() {
+export default  function MainBody({hotelData}) {
 
 
     return (
         <div className="main-body">
             <OffersController />
-            <QuickPlanner />
+            <QuickPlanner hotelData={hotelData} />
             <PropertyController />
-            <ExploreController />
-            <WeekDeals />
-            <UniquePropertie />
+            <ExploreController hotelData={hotelData} />
+            <WeekDeals  hotelData={hotelData}/>
+            <UniquePropertie hotelData={hotelData}/>
             <SignContainer />
             {/* <TrendingDestinationController /> */}
         </div>

@@ -4,18 +4,18 @@ export default function FlightSearchBox() {
         <div className="flightSearchBox">
                     <div className="flightheroBottomCheck">
                         <div className="flightheroBottomCheckList">
-                            <div> <input type="radio" name="trip" defaultChecked for="roundtrip" id="roundtrip" className="checkFlight roundtrip" /> 
+                            <div> <input type="radio" name="trip" defaultChecked id="roundtrip" className="checkFlight roundtrip" /> 
                                 <label htmlFor="roundtrip">Round-trip</label>
                             </div>
-                            <div> <input type="radio" name="trip" for="oneway" id="oneway" className="checkFlight oneway" />
+                            <div> <input type="radio" name="trip" id="oneway" className="checkFlight oneway" />
                                 <label htmlFor="oneway">One-way</label>
                             </div>
-                            <div> <input type="radio" name="trip" for="multicity" id="multicity" className="checkFlight multicity" />
+                            <div> <input type="radio" name="trip" id="multicity" className="checkFlight multicity" />
                                 <label htmlFor="multicity">Multi-city</label>
                             </div>
                             <div className="economyContainer">
-                                <select name="economySelect" id="economySelect">
-                                    <option value="economy" selected>Economy</option>
+                                <select name="economySelect" id="economySelect" defaultValue={"economy"}>
+                                    <option value="economy">Economy</option>
                                     <option value="premium">Premium Economy</option>
                                     <option value="business">Business </option>
                                     <option value="first">First Class</option>

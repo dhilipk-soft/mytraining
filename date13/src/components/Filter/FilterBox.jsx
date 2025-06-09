@@ -6,64 +6,76 @@ export default function FilterBox() {
     const [facilities, setFacilities] = useState([{
         id: 1,
         name: "Parking",
-        checked: false
+        checked: false,
+        category: "Facilities"
     },
     {
         id: 2,
         name: "Restaurant",
-        checked: false
+        checked: false,
+        category: "Facilities"
     },
     {
         id: 3,
         name: "Room  Service",
-        checked: false
+        checked: false,
+        category: "Facilities"
     },
     {
         id: 4,
         name: "24 Hour Front Desk",
-        checked: false
+        checked: false,
+        category: "Facilities"
     },
     {
         id: 5,
         name: "Swimming Pool",
-        checked: false
+        checked: false,
+        category: "Facilities"
     },
     {
         id: 6,
         name: "Bar",
-        checked: false
+        checked: false,
+        category: "Facilities"
     },
     {
         id: 7,
         name: "Gym",
-        checked: false
+        checked: false,
+        category: "Facilities"
     },
     
 ]);
     const [meals, setMeals] = useState([{
         id: 1,
         name: "Selt catering",
-        checked: false
+        checked: false,
+        category: "Meals"
     },
     {
         id: 2,
         name: "Breakfast included",
-        checked: false
+        checked: false,
+        category: "Meals"
     },
     {
         id: 3,
         name: "Dinner",
-        checked: false
+        checked: false,
+        category: "Meals"
     },
     {
         id: 4,
         name: "All Meals included",
-        checked: false
+        checked: false,
+        category: "Meals"
     },
     {
         id: 5,
         name: "Room Only",
-        checked: false
+        checked: false,
+        category: "Meals"
     },
 
     ]);    
@@ -78,26 +90,13 @@ export default function FilterBox() {
 
     useEffect(() => {
         
-            const newfacilitiesCheckedList = facilities.filter((f) => f.checked)
-            const newmealsCheckedList = meals.filter((m) => m.checked)
+        const newfacilitiesCheckedList = facilities.filter((f) => f.checked)
+        const newmealsCheckedList = meals.filter((m) => m.checked)
 
-            setCheckedList([...newfacilitiesCheckedList, ...newmealsCheckedList])
+        setCheckedList([...newfacilitiesCheckedList, ...newmealsCheckedList])
        
     },[facilities,meals])
 
-    useEffect(() => {
-        
-    })
-
-    // useEffect(() => {
-    //     setCheckedList((preCheckedList) => {
-    //         preCheckedList.map((check =>{
-    //             const match = facilities.some((item) => item.name === check.name)
-    //             const match1 = meals.some((item) => item.name === check.name)
-    //             return {...check,checked: match || match1}
-    //         }))
-    //     })
-    // },[facilities,meals])
 
     return (
         <div className="filterBox">
@@ -108,7 +107,7 @@ export default function FilterBox() {
                 </div>
             </div>
             {
-                !!checkedList && <FBox fName={"Filter By"} selected={checkedList} setSelected={setCheckedList}/>
+                checkedList.length > 0 && <FBox fName={"Filter By"} selected={checkedList} setSelected={setCheckedList}/>
             }
             <hr />
             <div className="filterFacilities">
@@ -183,30 +182,7 @@ export default function FilterBox() {
             </div>
             <hr />
             <div className="meals">
-                <div className="mealsTitle">
-                    Meals
-                </div>
-                <div className="mealslist">
-                    {
-                        meals.map((meal, index) => {
-                            return (
-                                <div className="meal" key={index}>
-                                    
-                                    <div className="mealcheckbox">
-                                        <input type="checkbox" checked={meal.checked} 
-                                        onChange={() => {setMeals(meals.map((m) => m.id === meal.id ? { ...m, checked: !m.checked } : m))
-
-                            }
-                                        } />
-                                    </div>
-                                    <div className="mealstype">
-                                        {meal.name}
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                <FBox fName={"Meals"} selected={meals} setSelected={setMeals} />
             </div>       
             <div className="reviews">
 

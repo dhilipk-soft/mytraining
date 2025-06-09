@@ -1,9 +1,21 @@
 
+import React, { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { SearchContext } from "../../Context/SearchContext"
+
 export default function HotelContainer({room,display}) {
 
+    const {setSearch} = useContext(SearchContext);
+
     return (
-        <NavLink to={`/search`} className="hotelContainer">
+        <NavLink to={{pathname:`/search`,
+            location: `?location=${room.location}`,
+            room: `?room=${room.name}`,
+            type: "rooms"
+        }}
+        
+        onClick={() => setSearch(room.location)}
+        className="hotelContainer">
             <div className="hotelContainerHead">
                 <img src={room.image} className="hotelContainerImage" alt="" />
             </div>

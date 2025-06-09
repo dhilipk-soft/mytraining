@@ -2,9 +2,10 @@ import {useState} from 'react'
 import MainSearchBox from '../SearchBox/MainSearchBox';
 import MainBody from './MainBody';
 import HeroContainer from '../Heros/HeroContainer';
-export default function Body() {
+export default function Body({hotelData}) {
 
 
+    // console.
     return (
         <div className="body">
             <MainSearchBox />
@@ -12,7 +13,7 @@ export default function Body() {
                 <input type="checkbox" className='checkFlight' id='checkFlight' />
                 <label htmlFor="checkFlight">I'm looking for flights</label>
            </div>
-           <MainBody />
+           <MainBody hotelData={hotelData} />
         </div>
     )
 }

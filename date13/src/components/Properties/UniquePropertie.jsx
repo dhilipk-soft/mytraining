@@ -1,6 +1,6 @@
 import { useState } from "react"
 import HotelContainer from "../WeekDeals/HotelContainer";
-export default function UniquePropertie(){
+export default function UniquePropertie({hotelData}) {
 
     const [rooms, setRooms] = useState([
     {
@@ -69,9 +69,9 @@ export default function UniquePropertie(){
             </div>
             <div className="uniquepropertybottom">
                 {
-                    rooms.map((room) => {
-                        return <div className="propertyContainer">
-                            <HotelContainer key={room.id} room={room} display={false} /> 
+                    hotelData.map((room) => {
+                        return <div className="propertyContainer" key={room.id} >
+                            <HotelContainer room={room.rooms[0]} display={false} /> 
                         </div>
                         
                     })

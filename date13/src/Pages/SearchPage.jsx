@@ -1,7 +1,8 @@
 
 import MainSearchBox from "../components/SearchBox/MainSearchBox"
 import FilterBox from "../components/Filter/FilterBox"
-export default function SearchPage() {
+import PreferedList from "../components/ListShow/PreferedList"
+export default function SearchPage({hotelData}) {
     return <div className="searchPage">
         <div className="searchContainer">
             <div className="searchContainertop">
@@ -9,7 +10,7 @@ export default function SearchPage() {
             </div>
             <div className="searchContainerBottom">
                 <div className="searchContainerBottomWrapper">
-                    <MainSearchBox />
+                    <MainSearchBox  />
                 </div>
             </div>            
         </div>
@@ -18,7 +19,9 @@ export default function SearchPage() {
                 <div className="searchContainerFilter">
                     <FilterBox />
                 </div>
-                
+                <div className="searchContainerList">
+                    <PreferedList hotelData={hotelData}  />
+                </div>
             </div>
         </div>
     </div>

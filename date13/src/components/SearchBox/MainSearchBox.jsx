@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { SearchContext } from "../../Context/SearchContext.jsx";
 
 export default function MainSearchBox() {
     const [adultCount, setAdultCount] = useState(2);
     const [childCount, setChildCount] = useState(0);
     const [roomCount, setRoomCount] = useState(1);
 
+    const { search, setSearch } = useContext(SearchContext);
+    
+
     return (
         <div className="searchbox">
             <div className="inputfield">
                 <span className="icon">🛏️</span>
-                <input className="searchbar" placeholder="Where are you going?" type="text" />
+                <input className="searchbar" placeholder="Where are you going?" value={search} onChange={(e) => setSearch(e.target.value) } type="text" />
             </div>
 
             <div className="inputfield datebar">
