@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import FBox from './FBox';
 
 export default function FilterBox() {
 
@@ -74,6 +75,30 @@ export default function FilterBox() {
 
     const facilitiesList = facilitiesshow ? facilities : facilities.slice(0, 5)
 
+
+    useEffect(() => {
+        
+            const newfacilitiesCheckedList = facilities.filter((f) => f.checked)
+            const newmealsCheckedList = meals.filter((m) => m.checked)
+
+            setCheckedList([...newfacilitiesCheckedList, ...newmealsCheckedList])
+       
+    },[facilities,meals])
+
+    useEffect(() => {
+        
+    })
+
+    // useEffect(() => {
+    //     setCheckedList((preCheckedList) => {
+    //         preCheckedList.map((check =>{
+    //             const match = facilities.some((item) => item.name === check.name)
+    //             const match1 = meals.some((item) => item.name === check.name)
+    //             return {...check,checked: match || match1}
+    //         }))
+    //     })
+    // },[facilities,meals])
+
     return (
         <div className="filterBox">
 
@@ -81,16 +106,10 @@ export default function FilterBox() {
                 <div className="checkedListhead">
                     Filter By
                 </div>
-                <div className="checkedBodyList">
-                {
-                    checkedList.map((checked) => {
-                        return <div className="checkedItem" key={checked.id}>
-                            {checked.name}
-                        </div>
-                    })
-                }
-                </div>
             </div>
+            {
+                !!checkedList && <FBox fName={"Filter By"} selected={checkedList} setSelected={setCheckedList}/>
+            }
             <hr />
             <div className="filterFacilities">
                 <div className="filterTitle">Filter
@@ -109,8 +128,6 @@ export default function FilterBox() {
                                             return f
                                         })
                                         setFacilities(newFacilities)
-                                        const newCheckedList = newFacilities.filter((f) => f.checked)
-                                        setCheckedList(newCheckedList)
                                         
                                     }} />
                                 <label htmlFor={facility.name}>{facility.name}</label>
@@ -139,7 +156,7 @@ export default function FilterBox() {
                     </div>
                     <div className="bathrooms">
                         <div className="bedcount">
-                            <div className={`bedcountminus ${bedcount === 0? 'disabled' : ''}`} onClick={bedcount < 1 ? '' : ()=>setBedcount(bedcount-1)}>
+                            <div className={`bedcountminus ${bedcount === 0? 'disabled' : ''}`} onClick={bedcount < 1 ? ()=>{} : ()=>setBedcount(bedcount-1)}>
                                 -
                             </div>
                             <div className="bedcountvalue">
@@ -150,7 +167,7 @@ export default function FilterBox() {
                             </div>
                         </div>
                         <div className="bathcount">
-                            <div className={`bathcountminus ${bathcount === 0? 'disabled' : ''}`} onClick={bathcount < 1  ? '' : () => setBathcount(bathcount-1)} >
+                            <div className={`bathcountminus ${bathcount === 0? 'disabled' : ''}`} onClick={bathcount < 1  ? ()=>{} : () => setBathcount(bathcount-1)} >
                                 -
                             </div>
                             <div className="bathcountvalue">
@@ -179,8 +196,6 @@ export default function FilterBox() {
                                         <input type="checkbox" checked={meal.checked} 
                                         onChange={() => {setMeals(meals.map((m) => m.id === meal.id ? { ...m, checked: !m.checked } : m))
 
-                                        const newCheckedList = meals.filter((f) => f.checked)
-                                        setCheckedList(newCheckedList)
                             }
                                         } />
                                     </div>

@@ -1070,6 +1070,7 @@ a{
     width: 100%;
 }
 
+.fboxTitle,
 .filterTitle,
 .bedandbathTitle,
 .mealsTitle,
@@ -1078,6 +1079,7 @@ a{
 }
 
 .filterFacilities,
+.fbox,
 .bedandbath,
 .meals,
 .checkedList{
@@ -1090,6 +1092,7 @@ a{
 
 }
 
+.fboxChecklist,
 .filterFacilitiesCheck,
 .mealslist
 {
@@ -1099,6 +1102,7 @@ a{
     gap: 10px;
 }
 
+.fboxChecklistItem,
 .filterFacility,
 .meal{
     display: flex;
@@ -1107,6 +1111,7 @@ a{
     gap: 15px;
 }
 
+.fboxChecklistItem input,
 .filterFacility input,
 .mealcheckbox input{
     width: 20px;
