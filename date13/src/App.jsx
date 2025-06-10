@@ -63,11 +63,11 @@ function App() {
     name: "Studio 3",
     image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
     property: "Loft",
-    trip: { location: "Mysore, India", distance: 132, price: "$3369" },
+    trip: { location: "Vadodara, India", distance: 132, price: "$3369" },
     rooms: [
       {
         id: 3,
-        name: "Room 3 - Mysore",
+        name: "Room 3 - Vadodara",
         price: 492,
         rating: 4.1,
         discount: 15,

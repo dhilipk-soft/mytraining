@@ -1,5 +1,7 @@
 
-export default function HorItem({hotel}) {
+export default function HorItem({hotel,getRatingLabel}) {
+
+   
 
     return (
         <div className="horItem">
@@ -14,9 +16,13 @@ export default function HorItem({hotel}) {
                             <p>{hotel.trip.location}</p>
                         </div>
                     </div>
-                    
-                    <div className="rateingHotel">
-                        {hotel.rooms[0].rating}
+                    <div className="ratingAndCacification">
+                        <div className="hotelCategory">
+                            <p>{getRatingLabel(hotel.rooms[0].rating)}</p>
+                        </div>
+                        <div className="rateingHotel">
+                            {hotel.rooms[0].rating}
+                        </div>
                     </div>
                 </div>
                 <div className="hotelRoomDetails">

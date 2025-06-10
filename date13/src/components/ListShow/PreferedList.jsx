@@ -25,32 +25,51 @@ import GridItem  from './GridItem'
 
 export default function PreferedList({hotelData}) {
 
+     function getRatingLabel(rating) {
+    if (rating >= 9) return "Excellent";
+    if (rating >= 8) return "Very Good";
+    if (rating >= 7) return "Good";
+    if (rating >= 6) return "Fair";
+    if (rating >= 5) return "Poor";
+    return "Very Poor";
+}
+
     const {search, setSearch} = useContext(SearchContext)
     const [showMode, setShowMode] = useState(true);
 
      const filteredHotels = hotelData.filter(trip =>
-        trip.rooms.some(room => room.location === search)
+        trip.rooms.some(room => room.location.toLowerCase().includes(search.toLowerCase()))
     )
 
     return (
         <div className="preferedList">
             <div className="preferedSearchTitleContainer">
-                <div className="preferedSearchTit">
-                    <h2>{search}:{filteredHotels.length+" exact matches"}</h2>
-                </div>
-                <div className="prefredSearchShow">
-                    <input type="checkbox" onClick={() => setShowMode(!showMode)}/>
-                    <label htmlFor="preferedSearchShow">Grid/List</label>
-                </div>
+            <div className="preferedSearchTit">
+                <h2>{search}: {filteredHotels.length} exact matches</h2>
             </div>
-            <div className="SearchedItem">
+
+            <label className="preferedToggleSwitch">
+                <input
+                type="checkbox"
+                id="toggle"
+                checked={showMode}
+                onChange={() => setShowMode(!showMode)}
+                />
+                <span className="switchtoggle"></span>
+                <div className="toggleSwitchRight">List</div>
+                <div className="toggleSwitchLeft">Grid</div>
+            </label>
+            </div>       
+                 <hr />
+
+            <div className={`SearchedItem ${showMode ? 'list' : 'grid'}`}>
                 {
                     showMode ? filteredHotels
                     .map((hotel) => {
-                        return <HorItem key={hotel.id} hotel={hotel} />
+                        return <HorItem key={hotel.id} getRatingLabel={getRatingLabel} hotel={hotel} />
                     }) : filteredHotels
                     .map((hotel) => {
-                        return <GridItem key={hotel.id} hotel={hotel} />
+                        return <GridItem key={hotel.id} getRatingLabel={getRatingLabel} hotel={hotel} />
                     })
                 }
             </div>

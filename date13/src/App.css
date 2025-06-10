@@ -1051,8 +1051,6 @@ a{
 .searchContainerFilter{
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    border: solid 1px #ccc;
     width: 250px;
     margin-right: 10px;
 }
@@ -1061,6 +1059,9 @@ a{
     display: flex;
     flex-direction: column;
     width: 100%;
+    
+    border-radius: 10px;
+    border: solid 1px #ccc;
 }
 
 .filterBox hr{
@@ -1196,6 +1197,104 @@ a{
     align-items: center;
 }
 
+    .preferedToggleSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    padding: 2px;
+    }
+
+    .preferedToggleSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+
+    .switchtoggle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 36px;
+    width: 48px;
+    background-color: white;
+    border: 1px solid #575656;
+    border-radius: 34px;
+    transition: 0.4s;
+    }
+
+    input:checked + .switchtoggle {
+    transform: translateX(48px);
+    }
+
+    .toggleSwitchRight,
+    .toggleSwitchLeft {
+    flex: 1;
+    z-index: 2;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 10px 0;
+    user-select: none;
+    }
+
+
+
+
+/* 
+.preferedSearchLabel{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switchInput{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkboxspan{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px
+}
+
+.checkboxspan::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%
+}
+
+input:checked + .checkboxspan{
+    background-color: #2196F3;
+}
+input:focus + .checkboxspan{
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .checkboxspan::before{
+    transform: translateX(26px);
+} */
+
 .horItem{
     width: 100%;
     border: solid 1px #ccc;
@@ -1203,10 +1302,17 @@ a{
     padding: 10px;
     display: flex;
     gap: 20px;
+    box-shadow: #ccc 0 0 1px;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
-.horItemImage{
+.horItemImage:hover{
+    cursor: pointer;
+}
+.horItemImage,
+.horItemImage img{
     width: 240px;
     height: 240px;
     object-fit: cover;
@@ -1214,12 +1320,15 @@ a{
     display: flex;
 }
 
-.horItemImage img{
-    width: 240px;
-    height: 100%;
+.gridItemImage,
+.gridItemImage img{
+     width: 260px;
+    height: 260px;
     object-fit: cover;
     border-radius: 5px;
-}   
+    display: flex;
+}
+
 
 .horItemDetails{
     width: 100%;
@@ -1233,26 +1342,32 @@ a{
     height: 70px;
 }
 
-.hotelWithlocation {
+.hotelWithlocation,
+.hotelNameGrid {
     color: #0166ff;
 }
 
+.hotelNameGrid h2,
 .hotelWithlocation h2{
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem;   
 }
 
+.hotelNameGrid h2:hover,
+.hotelWithlocation h2:hover{
+   color: #000000;
+   cursor: pointer;
+}
+
+.gridHotelLocation p,
 .hotellocation p{
     font-size: .8rem;
     font-weight: 400;
     color: #0166ff;
     margin-bottom: 10px;
-}
-
-.hotellocation{
     text-decoration:underline;
 }
 
+.gridItemRating,    
 .rateingHotel{
     border: solid 1px #ccc;
     border-radius: 5px;
@@ -1289,18 +1404,76 @@ a{
     cursor: pointer;
  }
 
+ .gridRoomStyle,
 .hotelRoomStyle{
     font-size: .8rem;
     font-weight: 600;
     margin-bottom: 10px; 
 }
 
+.gridRoomCancellation,
 .hotelRoomCancellation{
     font-size: .8rem;
     font-weight: 600;
     margin-bottom: 10px;
     color: green;
 }
+
+.ratingAndCacification{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.SearchedItem.list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.SearchedItem.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+    width: 100%;
+}
+
+.gridItem{
+    box-shadow: #ccc 0 0 1px;
+}
+
+.gridItemBody{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out
+}
+
+.hotelRateGrid{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.gridBodyDown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.gridDownPrice,
+.gridDownPrice h3{
+    text-align: right;
+    font-weight: 400;
+}
+
+
 
 /* 
 .trending {
